@@ -37,6 +37,7 @@ export async function POST(request: Request) {
     });
     return NextResponse.json({ ...session, error: false });
   } catch (error) {
-    return NextResponse.json({ error: error });
+    console.log(error);
+    return NextResponse.json({ error });
   }
 }

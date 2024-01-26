@@ -79,7 +79,7 @@ function StripeButton({
         customerInfo
       ).then((data) => {
         if (data.error) {
-          setMalwareError(JSON.stringify(data.error));
+          setMalwareError(data.error);
         } else {
           router.replace(`${data.url}`);
         }

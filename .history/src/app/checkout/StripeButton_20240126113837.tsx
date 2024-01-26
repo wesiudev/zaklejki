@@ -79,7 +79,7 @@ function StripeButton({
         customerInfo
       ).then((data) => {
         console.log(data);
-      });
+      } 
     }
   };
   return (

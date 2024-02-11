@@ -128,9 +128,9 @@ export default function CreateOwnSticker({
                 />
               </div>
               <div className="flex flex-col">
-                {/* <span className="text-3xl font-bold h-12 mt-4">
+                <span className="text-3xl font-bold h-12 mt-4">
                   {getPolishCurrency(getPrice(quantity))}
-                </span> */}
+                </span>
                 <span className="text-gray-500">
                   Darmowa dostawa dla zamówień powyżej 50zł
                 </span>

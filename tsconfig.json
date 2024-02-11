@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/firebase/index.js"
+    "src/redux/slices/sessionSlice.ts"
   ],
   "exclude": ["node_modules"]
 }

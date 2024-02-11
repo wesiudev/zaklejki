@@ -212,27 +212,25 @@ export default async function Page({ params }: { params: any }) {
               category={product.categories[0]}
             />
           </div>
-          {product.categories[1] !== undefined && (
-            <div className="mt-12 flex-col">
-              <Link
-                href={`/sklep-z-naklejkami/${polishToEnglish(
-                  product.categories[1]
-                )}`}
-                target="_blank"
-                title={`Więcej z kategrii ${product.categories[1]}`}
-                className="flex flex-row items-center text-2xl xl:text-3xl group font-bold mb-6 text-zinc-800 drop-shadow-xl shadow-black"
-              >
-                {capitalizeFirstLetter(product.categories[1])}
-                <FaArrowRight className="ml-2 text-lg xl:text-xl group-hover:translate-x-1.5 mt-[1px] xl:mt-[3px]  duration-200" />
-              </Link>
-              <RandomProductList
-                products={getRandomProducts(categoryProductsTwo, 18)}
-                length={categoryProductsTwo?.length}
-                type={`1`}
-                category={product.categories[1]}
-              />
-            </div>
-          )}
+          <div className="mt-12 flex-col">
+            <Link
+              href={`/sklep-z-naklejkami/${polishToEnglish(
+                product.categories[1]
+              )}`}
+              target="_blank"
+              title={`Więcej z kategrii ${product.categories[1]}`}
+              className="flex flex-row items-center text-2xl xl:text-3xl group font-bold mb-6 text-zinc-800 drop-shadow-xl shadow-black"
+            >
+              {capitalizeFirstLetter(product.categories[1])}
+              <FaArrowRight className="ml-2 text-lg xl:text-xl group-hover:translate-x-1.5 mt-[1px] xl:mt-[3px]  duration-200" />
+            </Link>
+            <RandomProductList
+              products={getRandomProducts(categoryProductsTwo, 18)}
+              length={categoryProductsTwo?.length}
+              type={`1`}
+              category={product.categories[1]}
+            />
+          </div>
         </div>
         <div className="h-full relative">
           <div className="mt-12 lg:mt-0 lg:pl-8 xl:pl-10 2xl:pl-12 flex-col sticky lg:top-24 xl:top-32">

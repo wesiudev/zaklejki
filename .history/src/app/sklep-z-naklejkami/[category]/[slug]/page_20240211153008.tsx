@@ -143,12 +143,12 @@ export default async function Page({ params }: { params: any }) {
               </div>
             </div>
 
-            {/* <p className="mt-4">
+            <p className="mt-4">
               Oferujemy również{" "}
               <Link
                 title="Tworzenie własnych naklejek"
                 target="_blank"
-                href="/about/tworzenie-wlasnych-naklejek"
+                href="/about/tworzenie-własnych-naklejek"
                 className="text-[#F87FF0]"
               >
                 możliwość stworzenia własnej, spersonalizowanej naklejki
@@ -174,7 +174,7 @@ export default async function Page({ params }: { params: any }) {
               className="text-lg p-3 py-2 rounded-3xl bg-[#F87FF0] hover:bg-[#f87ff0b6] text-white font-bold w-max"
             >
               Stwórz własną naklejkę
-            </Link> */}
+            </Link>
           </div>
           <div className="mt-12 flex-col">
             <Link

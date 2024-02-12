@@ -35,7 +35,7 @@ export default function Cart({
       return;
     }
     if (promotionCode.length === 7 && promotionCode.includes("-")) {
-      await verifyCoupon(promotionCode).then((res: any) => {
+      await verifyCoupon(promotionCode).then((res) => {
         if (res?.message?.error === false) {
           {
             toast.success(res?.message?.value, {
@@ -52,11 +52,11 @@ export default function Cart({
             router.push("/checkout");
           }
         } else {
-          toast.error(res?.message?.value, {
+          toast.error(res.message.value, {
             closeOnClick: true,
             autoClose: 5000,
           });
-          setPromotionCodeError(`Błąd: ${res?.message?.value}`);
+          setPromotionCodeError(`Błąd: ${res.message.value}`);
           setPromotionCodeTries(promotionCodeTries + 1);
           if (promotionCodeTries < 2) {
             setCountdownTime(5);

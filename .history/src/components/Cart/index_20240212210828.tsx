@@ -35,7 +35,7 @@ export default function Cart({
       return;
     }
     if (promotionCode.length === 7 && promotionCode.includes("-")) {
-      await verifyCoupon(promotionCode).then((res: any) => {
+      await verifyCoupon(promotionCode).then((res) => {
         if (res?.message?.error === false) {
           {
             toast.success(res?.message?.value, {

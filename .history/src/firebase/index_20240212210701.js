@@ -355,10 +355,7 @@ async function getCouponByValue(value) {
       };
     }
   } else {
-    return {
-      coupon: null,
-      message: { error: true, value: "Kod promocyjny nie istnieje." },
-    };
+    return { message: { error: true, value: "Kod promocyjny nie istnieje." } };
   }
 }
 

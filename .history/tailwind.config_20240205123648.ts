@@ -11,7 +11,6 @@ const config: Config = {
       backgroundImage: { "woman-pc": "url('/home-images/woman-pc.webp')" },
       fontFamily: {
         druk: ["var(--font-druk)"],
-        coco: ["var(--font-cocosharp)"],
       },
     },
   },

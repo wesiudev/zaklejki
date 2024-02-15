@@ -1,6 +1,6 @@
 import { categoriesArray } from "@/components/categories";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";
-import Redirect from "../../../components/redirect";
+import Redirect from "./redirect";
 
 export async function generateStaticParams() {
   return categoriesArray.map((cat: any) => ({

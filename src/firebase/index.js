@@ -9,6 +9,7 @@ import {
   arrayRemove,
   getDocs,
   collection,
+  addDoc,
 } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
@@ -368,7 +369,20 @@ async function getDocuments(collectionName) {
   const res = response.docs.map((doc) => doc.data());
   return res;
 }
+async function incrementGoogleCounter() {
+  const counterRef = doc(db, "counters", "globalCounter");
+  const docSnapshot = await getDoc(counterRef);
 
+  if (docSnapshot.exists()) {
+    const currentCount = docSnapshot.data().count || 0;
+    await updateDoc(counterRef, { count: currentCount + 1 });
+  } else {
+    await setDoc(counterRef, { count: 1 });
+  }
+
+  const updatedSnapshot = await getDoc(counterRef);
+  return updatedSnapshot.data();
+}
 export {
   getCheckout,
   getCheckouts,
@@ -395,5 +409,6 @@ export {
   getCartById,
   addOrder,
   updateOrder,
+  incrementGoogleCounter,
   auth,
 };

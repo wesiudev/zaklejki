@@ -39,7 +39,7 @@ export default function Header() {
           <div className="flex-row md:flex hidden">
             <Link
               title="Sklep z naklejkami"
-              href="/sklep-z-naklejkami"
+              href="/sklep"
               className="hover:text-[#FAA4F3] text-[14px] flex items-center px-3 py-6"
             >
               Sklep
@@ -114,7 +114,7 @@ export default function Header() {
           Strona główna
         </Link>
         <Link
-          href="/sklep-z-naklejkami"
+          href="/sklep"
           onClick={() => setMenuShow(!isMenuShow)}
           className={`flex flex-row items-center group  lg:duration-150 lg:delay-0`}
         >

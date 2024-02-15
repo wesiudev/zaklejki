@@ -6,7 +6,8 @@ import localFont from "next/font/local";
 import SessionHandler from "@/components/SessionHandler";
 import StoreProvider from "@/redux/Provider";
 import Toast from "@/components/Toast";
-import PrepareCart from "./sklep-z-naklejkami/components/PrepareCart";
+import PrepareCart from "./sklep/components/PrepareCart";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default async function RootLayout({
@@ -26,6 +27,7 @@ export default async function RootLayout({
           <PrepareCart />
           <SessionHandler />
           {children}
+          <Footer />
         </StoreProvider>
       </body>
     </html>

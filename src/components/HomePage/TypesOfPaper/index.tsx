@@ -1,24 +1,21 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
-
+import Link from "next/link";
+import * as Scroll from "react-scroll";
 export default function TypesOfPaper({
   typesOfPaper,
 }: {
   typesOfPaper: any[];
 }) {
-  const [modalOpen, setModalOpen] = useState<"silver" | "gold" | "">("");
   return (
     <>
-      {modalOpen && (
-        <div className="fixed left-0 top-0 z-30 bg-black bg-opacity-70 w-full h-full"></div>
-      )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-3 lg:gap-6 mt-6 lg:mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:gap-6 mt-6 lg:mt-10">
         {typesOfPaper.map((typeOfPaper: any, i: any) => (
-          <button
+          <Scroll.Link
             key={i}
-            onClick={() => setModalOpen(typeOfPaper.type)}
-            className="relative rounded-3xl overflow-hidden mt-6 sm:mt-0 group"
+            to={typeOfPaper.type}
+            smooth={true}
+            className="relative rounded-3xl overflow-hidden mt-6 md:mt-0 group cursor-pointer"
           >
             <div className="z-[50] flex flex-col justify-center items-center w-full h-full absolute left-0 top-0 bg-black bg-opacity-50 group hover:bg-opacity-70  duration-1000">
               <h3 className="mt-24 relative font-bold text-base sm:text-xl lg:text-2xl text-center text-white group-hover:-translate-y-6 duration-1000">
@@ -39,7 +36,58 @@ export default function TypesOfPaper({
               title={typeOfPaper.title}
               className="group-hover:scale-125 group-hover:rotate-3 duration-1000"
             />
-          </button>
+          </Scroll.Link>
+        ))}
+      </div>
+      <div className="flex flex-col w-full">
+        {typesOfPaper.map((typeOfPaper: any, i: any) => (
+          <div
+            key={i}
+            className={`${
+              i === 0 ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"
+            } flex mt-12 relative`}
+          >
+            <div
+              className="absolute -top-[150px] lg:-top-[200px] left-0 w-1 h-1"
+              id={typeOfPaper.type}
+            ></div>
+            <div
+              className={`${
+                i === 0
+                  ? "lg:rounded-l-3xl rounded-t-3xl lg:rounded-tr-none lg:rounded-tl-[75px]"
+                  : "lg:rounded-r-3xl rounded-t-3xl lg:rounded-tl-none lg:rounded-tr-[75px]"
+              } overflow-hidden lg:w-full`}
+            >
+              <Image
+                src={typeOfPaper.image2}
+                width={1024}
+                height={1024}
+                alt=""
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div
+              className={`${
+                i === 0
+                  ? "lg:rounded-r-3xl bg-yellow-200"
+                  : "lg:rounded-l-3xl bg-gray-200"
+              } lg:w-full p-3 lg:p-6  min-h-full w-full flex flex-col justify-center`}
+            >
+              <h2 className="text-3xl xl:text-5xl font-bold text-zinc-800 drop-shadow-xl shadow-black">
+                {typeOfPaper.title2}
+              </h2>
+              <p className="text-sm xl:text-base mb-2">
+                {typeOfPaper.longDescription}
+              </p>
+              <div className="flex flex-col space-y-2">
+                {typeOfPaper.additional.map((additional: any, i: any) => (
+                  <div key={i} className="flex flex-col items-start text-sm">
+                    {additional}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </>

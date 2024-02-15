@@ -10,7 +10,7 @@ export default function Categories({ setHovered }: { setHovered: any }) {
         {categoriesArray.map((cat: any, i: any) => (
           <Link
             title={`Zobacz ${cat.h1.toLowerCase()}`}
-            href={`/sklep-z-naklejkami/${cat.category}`}
+            href={`/sklep/${cat.category}`}
             key={i}
             className={`${
               i === 0 ? "ml-3 mt-3" : ""

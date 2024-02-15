@@ -171,7 +171,7 @@ export default function CheckoutSummary() {
                         </div>
                         <div className="pl-2 w-2/3">
                           <Link
-                            href={`/sklep-z-naklejkami/${
+                            href={`/sklep/${
                               item.categories[0]
                             }/${polishToEnglish(item.title)}`}
                             className="text-lg font-bold "

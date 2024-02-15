@@ -35,9 +35,9 @@ export default function RandomProductList({
             title={`Przejdź do produktu ${product.title}`}
             className={`w-max ${i === 0 ? "ml-0" : "ml-3"} !cursor-pointer`}
             key={i}
-            href={`/sklep-z-naklejkami/${
-              product.categories[0]
-            }/${polishToEnglish(product.title)}`}
+            href={`/sklep/${product.categories[0]}/${polishToEnglish(
+              product.title
+            )}`}
           >
             <Image
               className={`select-none rounded-xl h-[20vh] w-auto ${
@@ -68,7 +68,7 @@ export default function RandomProductList({
         ))}
         {type === "all" && (
           <Link
-            href={`/sklep-z-naklejkami/`}
+            href={`/sklep/`}
             className="text-white relative rounded-xl h-full mx-3 aspect-square flex flex-col items-center justify-center text-center bg-[#F87FF0] hover:bg-[#f87ff0b6] duration-300 !cursor-pointer"
           >
             <FaPlus className="h-3/5 aspect-square w-auto opacity-20 z-0 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
@@ -82,7 +82,7 @@ export default function RandomProductList({
         )}
         {type === "0" && (
           <Link
-            href={`/sklep-z-naklejkami/${polishToEnglish(category)}`}
+            href={`/sklep/${polishToEnglish(category)}`}
             className="text-white relative rounded-xl h-full mx-3 aspect-square flex flex-col items-center justify-center text-center bg-indigo-500 hover:bg-indigo-600 duration-300 !cursor-pointer"
           >
             <FaPlus className="h-3/5 aspect-square w-auto opacity-20 z-0 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
@@ -96,7 +96,7 @@ export default function RandomProductList({
         )}
         {type === "1" && (
           <Link
-            href={`/sklep-z-naklejkami/${polishToEnglish(category)}`}
+            href={`/sklep/${polishToEnglish(category)}`}
             className="text-white relative rounded-xl h-full mx-3 aspect-square flex flex-col items-center justify-center text-center bg-blue-500 hover:bg-blue-600 duration-300 !cursor-pointer"
           >
             <FaPlus className="h-3/5 aspect-square w-auto opacity-20 z-0 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />

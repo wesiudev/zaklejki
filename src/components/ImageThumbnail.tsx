@@ -58,7 +58,7 @@ export default function ImageThumbnail({
         </form>
       )} */}
       <Link
-        href={`/sklep-z-naklejkami/${product.categories[0]}/${polishToEnglish(
+        href={`/sklep/${product.categories[0]}/${polishToEnglish(
           product.title
         )}`}
         title={`Zobacz produkt ${product.title}`}

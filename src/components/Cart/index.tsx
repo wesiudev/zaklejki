@@ -88,7 +88,7 @@ export default function Cart({
   }
   return (
     <>
-      <button
+      {/* <button
         onClick={() => setCartOpen(!isCartOpen)}
         className={`hover:scale-125 duration-200  flex flex-row items-center group p-6 pt-12 pl-12  bg-[#F87FF0] hover:bg-[#f87ff0b6] rounded-tl-full  fixed bottom-0 right-0  z-[150]`}
       >
@@ -96,7 +96,7 @@ export default function Cart({
           {cart?.length === 0 ? "" : cart?.length}
         </div>
         <FaShoppingCart className="mr-2 text-3xl xl:text-5xl  text-white " />
-      </button>
+      </button> */}
 
       {isCartOpen && (
         <div className="fixed left-0 top-0 h-screen w-screen bg-black bg-opacity-70 flex items-center justify-center z-[750]">
@@ -135,7 +135,7 @@ export default function Cart({
                           <div className="pl-2 w-full">
                             <div className="w-full flex flex-row justify-between">
                               <Link
-                                href={`/sklep-z-naklejkami/${
+                                href={`/sklep/${
                                   item.categories[0]
                                 }/${polishToEnglish(item.title)}`}
                                 className="text-lg font-bold"

@@ -16,7 +16,7 @@ export default function NotFound() {
             Strona główna
           </Link>
           <Link
-            href="/sklep-z-naklejkami"
+            href="/sklep"
             className="mt-3 text-xl px-4 py-2 rounded-3xl bg-[#F87FF0] hover:bg-[#f87ff0b6] duration-300 text-white w-max mx-auto font-bold shadow-sm shadow-black"
           >
             Sklep

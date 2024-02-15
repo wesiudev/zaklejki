@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
+
+import ShopProducts from "@/components/ShopProducts";
 import { categoriesArray } from "@/components/categories";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";
-import Redirect from "../../../components/redirect";
+import { useRouter } from "next/navigation";
 
 export async function generateStaticParams() {
   return categoriesArray.map((cat: any) => ({
@@ -9,14 +12,13 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-  // const products = await getProductsByCategory(params.category);
+  const products = await getProductsByCategory(params.category);
   const category = categoriesArray.find(
     (cat) => cat.category === params.category
   );
 
   return (
     <>
-      <Redirect cat={category} />
       {/* <ShopProducts
         products={products}
         isSlug={true}

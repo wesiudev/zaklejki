@@ -39,7 +39,7 @@ export default function HeroSlider() {
           id: 0,
           text: "Unikalne naklejki!",
           link: {
-            href: "/sklep-z-naklejkami",
+            href: "/sklep",
             title: "Otwórz sklep",
             Icon: <FaRightLong className="ml-2" />,
           },
@@ -103,7 +103,7 @@ export default function HeroSlider() {
           id: 4,
           text: "Dowolność zakupów",
           link: {
-            href: "/sklep-z-naklejkami",
+            href: "/sklep",
             title: "Zobacz wzory",
             Icon: <FaRightLong className="ml-2" />,
           },

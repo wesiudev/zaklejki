@@ -50,7 +50,7 @@ export default function Page() {
         <FaArrowRightLong className="ml-3 h-6 w-8" />
       </Link>
       <Link
-        href="/sklep-z-naklejkami"
+        href="/sklep"
         className="p-4 font-bold text-4xl flex flex-row items-center justify-center w-full bg-[#F7A4F2] rounded-3xl text-white text-center mb-12 hover:bg-[#f7a4f2b4] duration-300"
         title="Wszystkie nasze naklejki"
       >

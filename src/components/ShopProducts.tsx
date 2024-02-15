@@ -102,7 +102,7 @@ export default function ShopProducts({
   return (
     <div className="w-full">
       <div className="mb-12 mt-24 lg:mt-0 text-gray-500 text-sm">
-        /<Link href="/sklep-z-naklejkami">sklep-z-naklejkami</Link>
+        /<Link href="/sklep">sklep</Link>
         {isSlug && `/${polishToEnglish(slug.category)}`}
       </div>
       {!isSlug && (
@@ -168,7 +168,7 @@ export default function ShopProducts({
                     <Flipped key={i} flipId={i}>
                       <Link
                         title={`Zobacz ${cat.h1.toLowerCase()}`}
-                        href={`/sklep-z-naklejkami/${cat.category}`}
+                        href={`/sklep/${cat.category}`}
                         key={i}
                         className={`${
                           i === 0 ? "lg:ml-3 lg:mt-3" : ""
@@ -245,7 +245,7 @@ export default function ShopProducts({
                     <Flipped key={i} flipId={i}>
                       <Link
                         title={`Zobacz ${cat.h1.toLowerCase()}`}
-                        href={`/sklep-z-naklejkami/${cat.category}`}
+                        href={`/sklep/${cat.category}`}
                         key={i}
                         className={`${
                           i === 0 ? "lg:ml-3 lg:mt-3" : ""

@@ -178,7 +178,7 @@ export default function ShopProducts({
               </div>
             </div>
           </div>
-          <p className="text-gray-500 drop-shadow-xl shadow-black text-sm sm:text-base xl:text-lg relative z-0 mt-24">
+          <p className="text-gray-500 mt-6 drop-shadow-xl shadow-black text-sm sm:text-base xl:text-lg relative z-0 mt-24">
             {slug.p}
           </p>
         </>

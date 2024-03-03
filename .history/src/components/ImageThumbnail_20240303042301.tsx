@@ -86,7 +86,7 @@ export default function ImageThumbnail({
           </div>
         )} */}
         <div className="z-[25] group-hover:opacity-100 opacity-0 duration-500 absolute left-0 top-0 w-full h-auto overflow-hidden rounded-lg">
-          <div className="relative w-full h-full group-hover:scale-[2] duration-500">
+          <div className="relative w-full h-full group-hover:scale-[3] duration-500">
             <Image
               src="/slugImages/macbookmockup1.webp"
               width={1024}

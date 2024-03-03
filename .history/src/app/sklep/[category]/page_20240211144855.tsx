@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-// category - may be category of a sticker eg. cat, dog, etc. or category of a product eg. for phone, for laptop, etc.
+
 import ShopProducts from "@/components/ShopProducts";
 import { categoriesArray } from "@/components/categories";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";

@@ -17,14 +17,12 @@ export default async function Page({ params }: { params: any }) {
   );
   return (
     <>
-      {
-        <ShopProducts
-          products={products}
-          isSlug={true}
-          slug={category}
-          categories={categoriesArray}
-        />
-      }
+      <ShopProducts
+        products={products}
+        isSlug={true}
+        slug={category}
+        categories={categoriesArray}
+      />
     </>
   );
 }

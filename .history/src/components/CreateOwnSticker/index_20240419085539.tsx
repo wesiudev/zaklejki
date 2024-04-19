@@ -9,6 +9,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/firebase";
 import { getPrice } from "@/lib/getStickerPrice";
 import FirstUserInteraction from "./FirstUserInteraction";
+import Link from "next/link";
 export default function CreateOwnSticker() {
   const [currentImage, setCurrentImage] = useState(-1);
   const [quantity, setQuantity] = useState(0);
@@ -39,18 +40,22 @@ export default function CreateOwnSticker() {
       })
     );
   }
+  const [isFunctionalityAdded, setIsFunctionalityAdded] =
+    useState<boolean>(false);
   return (
     <div
       className={`bg-[#312E81] relative py-24 -mr-4 lg:mr-0 flex flex-col text-white w-full duration-500 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32`}
     >
+      {!isFunctionalityAdded && <div className="w-full fixed top-0 left-0 h-screen bg-[#312E81] flex items-center justify-center text-white text-4xl flex-wrap">Już wkrótce! <div className="ml-4"><Link href="/sklep" text-green-500 p-2 rounded-md>Zobacz sklep</Link></div></div> }
       <h1 className="text-white font-bold text-4xl md:text-3xl lg:text-4xl">
         Tworzenie własnej naklejki
       </h1>
       <h2 className="text-white font-bold text-2xl mt-6 ">Wczytaj zdjęcie</h2>
       <p className="w-full mb-6 text-sm lg:text-base">
         Dodaj plik obrazka, z którego wydrukujemy dla Ciebie unikalną naklejkę.
-        Proces jest prosty i przyjemny – wystarczy, że przeslesz nam wybrany
+        Proces jest prosty i przyjemny – wystarczy, że prześlesz nam wybrany
         przez siebie obrazek, a my zajmiemy się resztą!
+
       </p>
       <FirstUserInteraction
         emptyRows={emptyRows}
@@ -139,13 +144,15 @@ export default function CreateOwnSticker() {
                     <label htmlFor={`input${idx}`}>
                       <div className="aspect-square flex items-center justify-center bg-[#2F313C] border-2 border-transparent hover:border-[#525358] rounded-lg cursor-pointer">
                         {loading == idx ? (
-                          <Image
-                            width={24}
-                            height={24}
-                            className="h-6 w-6"
-                            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/abfa05c49acf005b8b1e0ef8eb25a67a7057eb20/svg-css/blocks-shuffle-2.svg"
-                            alt=""
-                          />
+                          <div className="bg-white rounded-lg h-9 w-9">
+                            <Image
+                              width={24}
+                              height={24}
+                              className="h-6 w-6"
+                              src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/abfa05c49acf005b8b1e0ef8eb25a67a7057eb20/svg-css/blocks-shuffle-2.svg"
+                              alt=""
+                            />
+                          </div>
                         ) : (
                           <FaImage className="text-5xl text-gray-400" />
                         )}

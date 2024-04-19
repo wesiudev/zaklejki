@@ -9,6 +9,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/firebase";
 import { getPrice } from "@/lib/getStickerPrice";
 import FirstUserInteraction from "./FirstUserInteraction";
+import Link from "next/link";
 export default function CreateOwnSticker() {
   const [currentImage, setCurrentImage] = useState(-1);
   const [quantity, setQuantity] = useState(0);
@@ -39,10 +40,22 @@ export default function CreateOwnSticker() {
       })
     );
   }
+  const [isFunctionalityAdded, setIsFunctionalityAdded] =
+    useState<boolean>(false);
   return (
     <div
       className={`bg-[#312E81] relative py-24 -mr-4 lg:mr-0 flex flex-col text-white w-full duration-500 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32`}
     >
+      {!isFunctionalityAdded && (
+        <div className="w-full fixed top-0 left-0 h-screen bg-[#312E81] flex items-center justify-center text-white text-4xl flex-wrap">
+          Już wkrótce!
+          <div className="ml-4">
+            <Link href="/sklep" className="bg-green-500 p-2 rounded-md">
+              Zobacz sklep
+            </Link>
+          </div>
+        </div>
+      )}
       <h1 className="text-white font-bold text-4xl md:text-3xl lg:text-4xl">
         Tworzenie własnej naklejki
       </h1>

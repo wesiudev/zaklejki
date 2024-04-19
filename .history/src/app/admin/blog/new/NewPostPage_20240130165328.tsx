@@ -27,6 +27,7 @@ export default function NewPostPage() {
     tags: [],
     faq: [],
     url: "",
+    blogType: "",
     creationTime: Date.now(),
   });
   const [selectedSection, setSelectedSection] = useState({
@@ -65,7 +66,7 @@ export default function NewPostPage() {
     newTags.splice(idx, 1);
     setInput({ ...input, tags: newTags });
   };
-
+  const blogTypes = ["art", "tattoo"];
   if (typeof window !== "undefined")
     return (
       <>
@@ -99,7 +100,21 @@ export default function NewPostPage() {
               <h1 className="w-full text-3xl text-white font-bold pt-12">
                 Nowy post
               </h1>
-
+              <select
+                className="text-black p-3 drop-shadow-md shadow-black rounded-md border-2 border-black mt-3"
+                id="category"
+                value={input.blogType}
+                onChange={(e) => {
+                  setInput({ ...input, blogType: e.target.value });
+                }}
+              >
+                <option value="">Wybierz rodzaj bloga</option>
+                {blogTypes.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
               <div className="grid grid-cols-1 text-lg h-max w-full">
                 <PostImages input={input} setInput={setInput} />
                 <div className="grid grid-cols-3 gap-3">

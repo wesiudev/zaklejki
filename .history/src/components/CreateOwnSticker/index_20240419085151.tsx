@@ -39,21 +39,19 @@ export default function CreateOwnSticker() {
       })
     );
   }
+  const [isFunctionalityAdded, setIsFunctionalityAdded] =
+    useState<boolean>(false);
   return (
     <div
       className={`bg-[#312E81] relative py-24 -mr-4 lg:mr-0 flex flex-col text-white w-full duration-500 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32`}
     >
-      <div className="flex flex-row items-center justify-between mb-3">
-        <h2 className="text-white font-bold text-4xl md:text-3xl lg:text-4xl">
-          Wczytaj zdjęcie
-        </h2>
-        <button className="bg-gray-400 bg-opacity-40 hover:bg-opacity-20 duration-300 rounded-md p-2">
-          <IoCloseSharp className="text-4xl" />
-        </button>
-      </div>
+      <h1 className="text-white font-bold text-4xl md:text-3xl lg:text-4xl">
+        Tworzenie własnej naklejki
+      </h1>
+      <h2 className="text-white font-bold text-2xl mt-6 ">Wczytaj zdjęcie</h2>
       <p className="w-full mb-6 text-sm lg:text-base">
         Dodaj plik obrazka, z którego wydrukujemy dla Ciebie unikalną naklejkę.
-        Proces jest prosty i przyjemny – wystarczy, że przeslesz nam wybrany
+        Proces jest prosty i przyjemny – wystarczy, że prześlesz nam wybrany
         przez siebie obrazek, a my zajmiemy się resztą!
       </p>
       <FirstUserInteraction
@@ -143,13 +141,15 @@ export default function CreateOwnSticker() {
                     <label htmlFor={`input${idx}`}>
                       <div className="aspect-square flex items-center justify-center bg-[#2F313C] border-2 border-transparent hover:border-[#525358] rounded-lg cursor-pointer">
                         {loading == idx ? (
-                          <Image
-                            width={24}
-                            height={24}
-                            className="h-6 w-6"
-                            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/abfa05c49acf005b8b1e0ef8eb25a67a7057eb20/svg-css/blocks-shuffle-2.svg"
-                            alt=""
-                          />
+                          <div className="bg-white rounded-lg h-9 w-9">
+                            <Image
+                              width={24}
+                              height={24}
+                              className="h-6 w-6"
+                              src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/abfa05c49acf005b8b1e0ef8eb25a67a7057eb20/svg-css/blocks-shuffle-2.svg"
+                              alt=""
+                            />
+                          </div>
                         ) : (
                           <FaImage className="text-5xl text-gray-400" />
                         )}

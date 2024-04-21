@@ -96,7 +96,7 @@ export default async function Page({ params }: { params: any }) {
           </div>
           <div className="flex mt-12 flex-col text-zinc-800 drop-shadow-xl shadow-black space-y-4">
             <div className="flex flex-row h-max">
-              <div className="w-max bg-[#F87FF0] rounded-l-3xl px-2 min-h-full flex items-center justify-center">
+              <div className="w-max bg-indigo-600 rounded-l-3xl px-2 min-h-full flex items-center justify-center">
                 <FaShippingFast className="h-10 w-10 font-bold text-white" />
               </div>
               <div className="flex flex-col bg-[#f5a5ee28] rounded-r-3xl p-2 lg:p-3">
@@ -111,7 +111,7 @@ export default async function Page({ params }: { params: any }) {
               </div>
             </div>
             <div className="flex flex-row h-max">
-              <div className="w-max bg-[#F87FF0] rounded-l-3xl px-2 min-h-full flex items-center justify-center">
+              <div className="w-max bg-indigo-600 rounded-l-3xl px-2 min-h-full flex items-center justify-center">
                 <AiOutlineStar className="h-10 w-10 font-bold text-white" />
               </div>
               <div className="flex flex-col bg-[#f5a5ee28] rounded-r-3xl p-2 lg:p-3">
@@ -127,7 +127,7 @@ export default async function Page({ params }: { params: any }) {
               </div>
             </div>
             <div className="flex flex-row h-max">
-              <div className="w-max bg-[#F87FF0] rounded-l-3xl p-2 min-h-full flex items-center justify-center">
+              <div className="w-max bg-indigo-600 rounded-l-3xl p-2 min-h-full flex items-center justify-center">
                 <RiEmojiStickerLine className="h-10 w-10 font-bold text-white" />
               </div>
               <div className="flex flex-col bg-[#f5a5ee28] rounded-r-3xl p-2 lg:p-3">
@@ -171,7 +171,7 @@ export default async function Page({ params }: { params: any }) {
             <Link
               href="/tworzenie-naklejek"
               title="O tworzeniu własnych naklejek"
-              className="text-lg p-3 py-2 rounded-3xl bg-[#F87FF0] hover:bg-[#f87ff0b6] text-white font-bold w-max"
+              className="text-lg p-3 py-2 rounded-3xl bg-indigo-600 hover:bg-[#f87ff0b6] text-white font-bold w-max"
             >
               Stwórz własną naklejkę
             </Link>
@@ -240,7 +240,7 @@ export default async function Page({ params }: { params: any }) {
                 <Link
                   href={`/sklep/${polishToEnglish(category)}`}
                   title={`Przejdź do kategorii ${category}`}
-                  className={`mb-3 text-white rounded-3xl px-3 bg-[#F87FF0] hover:bg-[#f87ff0ad] duration-300 hover:scale-105 text-sm ml-2`}
+                  className={`mb-3 text-white rounded-3xl px-3 bg-indigo-600 hover:bg-[#f87ff0ad] duration-300 hover:scale-105 text-sm ml-2`}
                   key={i}
                   target="_blank"
                 >

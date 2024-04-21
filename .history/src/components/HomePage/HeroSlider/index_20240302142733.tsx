@@ -153,7 +153,7 @@ export default function HeroSlider() {
               setUserInteraction(true);
             }}
             className={`${
-              currentSlide === slideNumber ? "bg-[#F87FF0]" : "bg-transparent"
+              currentSlide === slideNumber ? "bg-indigo-600" : "bg-transparent"
             } h-4 w-4 rounded-full border-2 border-[#F87FF0] duration-200`}
             key={slideNumber}
           ></button>
@@ -230,7 +230,7 @@ function SliderContent({
             href={slide.link.href}
             className={`${
               slide.center ? "mx-auto" : "mx-auto lg:mx-0"
-            } w-max px-3 py-1.5 rounded-lg text-white font-bold text-base sm:text-xl flex flex-row items-center border-2 border-[#F87FF0] bg-[#F87FF0] hover:bg-[#eb9ee5] duration-300 mt-2 lg:mt-3`}
+            } w-max px-3 py-1.5 rounded-lg text-white font-bold text-base sm:text-xl flex flex-row items-center border-2 border-[#F87FF0] bg-indigo-600 hover:bg-[#eb9ee5] duration-300 mt-2 lg:mt-3`}
           >
             {slide.link.title}
             {slide.link.Icon && slide.link.Icon}

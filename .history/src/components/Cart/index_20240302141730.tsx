@@ -93,7 +93,7 @@ export default function Cart({
     <>
       {/* <button
         onClick={() => setCartOpen(!isCartOpen)}
-        className={`hover:scale-125 duration-200  flex flex-row items-center group p-6 pt-12 pl-12  bg-[#F87FF0] hover:bg-[#f87ff0b6] rounded-tl-full  fixed bottom-0 right-0  z-[150]`}
+        className={`hover:scale-125 duration-200  flex flex-row items-center group p-6 pt-12 pl-12  bg-indigo-600 hover:bg-[#f87ff0b6] rounded-tl-full  fixed bottom-0 right-0  z-[150]`}
       >
         <div className="absolute rounded-full p-1 h-max w-auto text-white font-bold text-lg xl:text-2xl  right-3 bottom-3  aspect-square">
           {cart?.length === 0 ? "" : cart?.length}

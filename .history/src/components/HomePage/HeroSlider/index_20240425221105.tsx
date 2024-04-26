@@ -32,7 +32,7 @@ export default function HeroSlider() {
 
   return (
     <div
-      className={`mt-24 relative w-full h-[60vh] overflow-hidden rounded-2xl lg:border-2 lg:border-[#F87FF0] drop-shadow-xl shadow-black`}
+      className={`mt-24 relative w-full h-[50vh] overflow-hidden rounded-2xl lg:border-2 lg:border-[#F87FF0] drop-shadow-xl shadow-black`}
     >
       {[
         {
@@ -40,11 +40,11 @@ export default function HeroSlider() {
           text: "Unikalne naklejki!",
           link: {
             href: "/sklep",
-            title: "Otwórz sklep",
+            title: "",
             Icon: <FaRightLong className="ml-2" />,
           },
           description:
-            "Każda z naszych naklejek to unikalny wzór, niepowtarzalny w swoim rodzaju. W naszej bogatej kolekcji, obejmującej ponad 2000 różnorodnych naklejek, z pewnością znajdziesz coś idealnego dla siebie!",
+            "W naszej bogatej kolekcji, obejmującej ponad 2000 różnorodnych naklejek, z pewnością znajdziesz coś idealnego dla siebie!",
           center: true,
         },
         {
@@ -64,7 +64,7 @@ export default function HeroSlider() {
             Icon: <FaRightLong className="ml-2" />,
           },
           description:
-            "Rozpocznij niepowtarzalną podróż w świat swoich pomysłów za pomocą naszego ekscytującego Kreatora Naklejek! Oferujemy Ci szansę stworzenia własnej, personalizowanej naklejki, która idealnie odzwierciedli Twój wyjątkowy styl.",
+            "Oferujemy Ci szansę stworzenia własnej, personalizowanej naklejki, która idealnie odzwierciedli Twój wyjątkowy styl.",
           center: true,
         },
         {
@@ -111,9 +111,9 @@ export default function HeroSlider() {
           },
           description: (
             <p>
-              Nie musisz zamawiać naklejek w dużych ilościach. Każda naklejka
-              jest wycinana własnoręcznie, dzięki czemu w naszym sklepie możesz
-              zacząć kolekcjonować unikalne wzory od jednej sztuki!
+              Każda naklejka jest wycinana własnoręcznie, dzięki czemu w naszym
+              sklepie możesz zacząć kolekcjonować unikalne wzory od jednej
+              sztuki!
             </p>
           ),
           center: true,
@@ -127,7 +127,8 @@ export default function HeroSlider() {
             Icon: <FaRightLong className="ml-2" />,
           },
           description:
-            "Dodaj niepowtarzalny element do swojego otoczenia dzięki naszym twórczym naklejkom. Odkryj nowoczesne wzory i zanurz się w pełni barw, które ożywią każde pomieszczenie oraz przedmiot!",
+            "Odkryj nowoczesne wzory i zanurz się w pełni barw, które ożywią każde pomieszczenie oraz przedmiot!",
+          center: true,
         },
       ].map((slide) => (
         <>

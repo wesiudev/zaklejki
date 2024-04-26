@@ -40,7 +40,7 @@ export default function HeroSlider() {
           text: "Unikalne naklejki!",
           link: {
             href: "/sklep",
-            title: "Otwórz sklep",
+            title: "Przejdź do sklepu",
             Icon: <FaRightLong className="ml-2" />,
           },
           description:

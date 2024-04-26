@@ -65,7 +65,7 @@ export default function ImageThumbnail({
         className="relative group duration-500 overflow-hidden"
       >
         {!isLoading && product?.title && (
-          <div className="opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
+          <div className="z-20 opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
             {product?.title ? product?.title : ""}
           </div>
         )}
@@ -85,8 +85,8 @@ export default function ImageThumbnail({
             </button>
           </div>
         )} */}
-        <div className="group overflow-hidden rounded-3xl mt-6">
-          <div className="relative w-full h-full group-hover:scale-150 duration-500">
+        <div className="z-[25] group-hover:opacity-100 opacity-0 duration-500 absolute left-0 top-0 w-full h-auto overflow-hidden rounded-lg">
+          <div className="relative w-full h-full group-hover:scale-[2] duration-500">
             <Image
               src="/slugImages/macbookmockup1.webp"
               width={1024}
@@ -100,11 +100,36 @@ export default function ImageThumbnail({
               src={product.image_source}
               width={150}
               height={150}
-              title="Mała skala obrazek na mockup'ie"
-              alt="Mała skala obrazek na mockup'ie"
+              title="Naklejka na laptopa, iphone lub tablet"
+              alt={`${product.title} na laptopa, iphone lub tablet`}
               className="h-auto w-[15%] absolute right-[33.5%] top-[55%] -translate-y-1/2 z-[50] shadow-sm shadow-black"
             />
           </div>
+        </div>
+        <Image
+          className={`group-hover:opacity-50 duration-500 overflow-hidden rounded-xl ${
+            isLoading ? "bg-zinc-500 bg-opacity-50 animate-pulse" : ""
+          }`}
+          priority
+          width={400}
+          height={400}
+          src={product?.image_source}
+          title={`${product?.title} odzobna na ścianę`}
+          alt={`${product?.title} odzobna na ścianę`}
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAA"
+          placeholder="blur"
+          onLoad={() => setIsLoading(false)}
+        />
+        <div
+          className={`rounded-md flex flex-col items-center justify-center w-max h-max ${
+            isLoading
+              ? "absolute left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] h-12 w-12 text-white"
+              : "hidden"
+          }`}
+        >
+          <FaImage
+            className={`rounded-md absolute left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] h-12 w-12 text-white`}
+          />
         </div>
       </Link>
     </>

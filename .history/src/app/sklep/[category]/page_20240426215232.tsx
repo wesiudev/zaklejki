@@ -1,6 +1,7 @@
+// category - may be category of a sticker eg. cat, dog, etc. or category of a product eg. for phone, for laptop, etc.
+import ShopProducts from "@/components/ShopProducts";
 import { categoriesArray } from "@/components/categories";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";
-import Redirect from "../../../components/redirect";
 
 export async function generateStaticParams() {
   return categoriesArray.map((cat: any) => ({
@@ -9,20 +10,22 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-  // const products = await getProductsByCategory(params.category);
+  const products = await getProductsByCategory(params.category);
   const category = categoriesArray.find(
     (cat) => cat.category === params.category
   );
+  console.log(products);
 
   return (
     <>
-      <Redirect cat={category} />
-      {/* <ShopProducts
-        products={products}
-        isSlug={true}
-        slug={category}
-        categories={categoriesArray}
-      /> */}
+      {
+        <ShopProducts
+          products={products}
+          isSlug={true}
+          slug={category}
+          categories={categoriesArray}
+        />
+      }
     </>
   );
 }

@@ -39,16 +39,11 @@ export const categoriesArray = [
     h1: "Naklejki filmowe",
     p: "Ta kategoria zawiera naklejki z motywami znanymi z filmów. Znajdziesz tutaj postacie, symbole i cytaty z ulubionych filmów, od klasyków po nowości kinowe. Doskonałe dla kinomanów.",
   },
-  {
-    category: "smieszne",
-    h1: "Naklejki śmieszne",
-    p: "W tej kategorii znajdziesz naklejki z zabawnymi obrazkami, memami i tekstami. Doskonałe do poprawienia humoru i dodania uroku do codziennych przedmiotów.",
-  },
-  {
-    category: "memy",
-    h1: "Naklejki śmieszne",
-    p: "W tej kategorii znajdziesz naklejki z zabawnymi obrazkami, memami i tekstami. Doskonałe do poprawienia humoru i dodania uroku do codziennych przedmiotów.",
-  },
+  // {
+  //   category: "smieszne",
+  //   h1: "Naklejki śmieszne",
+  //   p: "W tej kategorii znajdziesz naklejki z zabawnymi obrazkami, memami i tekstami. Doskonałe do poprawienia humoru i dodania uroku do codziennych przedmiotów.",
+  // },
   {
     category: "widoki",
     h1: "Naklejki z malowniczymi widokami",

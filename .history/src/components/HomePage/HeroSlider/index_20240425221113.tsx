@@ -32,7 +32,7 @@ export default function HeroSlider() {
 
   return (
     <div
-      className={`mt-24 relative w-full h-[60vh] overflow-hidden rounded-2xl lg:border-2 lg:border-[#F87FF0] drop-shadow-xl shadow-black`}
+      className={`mt-24 relative w-full h-[50vh] overflow-hidden rounded-2xl lg:border-2 lg:border-[#F87FF0] drop-shadow-xl shadow-black`}
     >
       {[
         {
@@ -40,7 +40,7 @@ export default function HeroSlider() {
           text: "Unikalne naklejki!",
           link: {
             href: "/sklep",
-            title: "Otwórz sklep",
+            title: "Przejdź do sklepu",
             Icon: <FaRightLong className="ml-2" />,
           },
           description:

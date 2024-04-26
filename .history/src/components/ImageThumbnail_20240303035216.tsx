@@ -92,7 +92,7 @@ export default function ImageThumbnail({
           priority
           width={400}
           height={400}
-          src={product?.image_thumbnail}
+          src={product?.image_source}
           title={`${product?.title} odzobna na ścianę`}
           alt={`${product?.title} odzobna na ścianę`}
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAA"
@@ -121,7 +121,7 @@ export default function ImageThumbnail({
               />
               <Image
                 priority
-                src={product.image_thumbnail}
+                src={product.image_source}
                 width={150}
                 height={150}
                 title="Mała skala obrazek na mockup'ie"

@@ -164,7 +164,7 @@ export default function CheckoutSummary() {
                           <Image
                             width={120}
                             height={120}
-                            src={item?.image_source}
+                            src={item?.image_thumbnail}
                             alt=""
                             className="w-full h-full object-cover my-auto"
                           />
@@ -174,7 +174,7 @@ export default function CheckoutSummary() {
                             href={`/sklep/${
                               item.categories[0]
                             }/${polishToEnglish(item.title)}`}
-                            className="text-lg font-bold "
+                            className="text-sm sm:text-lg font-bold "
                           >
                             {removeNumbersFromString(item.title)}
                           </Link>
@@ -200,7 +200,7 @@ export default function CheckoutSummary() {
                           </span>
                         </div>
                       </div>
-                      <div className="font-bold text-lg mt-1 w-max">
+                      <div className="font-bold text-lg w-max">
                         <div className="w-max">
                           {getPolishCurrency(item.price)}
                         </div>
@@ -210,7 +210,7 @@ export default function CheckoutSummary() {
                   </div>
                 ))}
               </div>
-              <div className="px-3 sm:px-6 lg:px-24 text-white">
+              <div className="sm:px-6 lg:px-24 text-white">
                 <div className="flex flex-row items-center justify-between w-full">
                   <p className="text-lg font-bold">Podsumowanie</p>
                   <p className="text-lg font-bold">
@@ -219,7 +219,7 @@ export default function CheckoutSummary() {
                 </div>
                 <div className="bg-[#e5e7eb] h-px my-4 opacity-10" />
               </div>
-              <div className="px-3 sm:px-6  lg:px-24 text-white">
+              <div className="sm:px-6 lg:px-24 text-white">
                 <div className="flex flex-row items-center justify-between w-full">
                   <p className="text-lg font-bold">Wysyłka</p>
                   <p className="text-lg font-bold">
@@ -238,7 +238,7 @@ export default function CheckoutSummary() {
                 </div>
                 <div className="bg-[#e5e7eb] h-px my-4 opacity-10" />
               </div>
-              <div className="px-3 sm:px-6 lg:px-24 mt-6">
+              <div className="sm:px-6 lg:px-24 mt-6">
                 <OrderForm
                   customerInfo={customerInfo}
                   setCustomerInfo={setCustomerInfo}

@@ -164,7 +164,7 @@ export default function CheckoutSummary() {
                           <Image
                             width={120}
                             height={120}
-                            src={item?.image_source}
+                            src={item?.image_thumbnail}
                             alt=""
                             className="w-full h-full object-cover my-auto"
                           />

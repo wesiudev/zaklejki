@@ -147,6 +147,6 @@ export const categoriesArray = [
   {
     category: "blackbellart",
     h1: "Naklejka Artystki Blackbell",
-    p: "Strona Artystki: blackbellart.com - Sklep z Obrazami | Naklejki | Obrazy na zamówienie.",
+    p: "Strona Artysty: blackbellart.com - Sklep z Obrazami | Naklejki | Obrazy na zamówienie.",
   },
 ];

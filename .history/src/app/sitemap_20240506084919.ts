@@ -11,9 +11,7 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }));
   const categories = categoriesArray.map((cat: any) => ({
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/sklep/${polishToEnglish(
-      cat.category
-    )}`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/${polishToEnglish(cat.category)}`,
     lastModified: new Date().toISOString(),
   }));
   return [

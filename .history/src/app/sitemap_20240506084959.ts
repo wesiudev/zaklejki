@@ -25,14 +25,6 @@ export default async function sitemap() {
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/sklep`,
       lastModified: new Date().toISOString(),
     },
-    {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/spis-tresci`,
-      lastModified: new Date().toISOString(),
-    },
     ...categories,
     ...products,
   ];

@@ -11,7 +11,7 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Blog Z Naklejkami | Spis Tresci | Zaklejki.pl",
+  title: "Spis Tresci - Zaklejki.pl",
   description:
     "Znajdź swoje ulubione naklejki od różnych tematów. Od sztuki po fantastykę, filmów, świata, smoków, bajek i baśni, a nawet abstrakcyjnych wzorów.",
   keywords:

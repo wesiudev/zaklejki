@@ -9,19 +9,24 @@ export default function Page() {
     </div>
   );
 }
-
+<meta
+        name="description"
+        content="Znajdź swoje ulubione naklejki od różnych tematów. Od sztuki po fantastykę, filmów, świata, smoków, bajek i baśni, a nawet abstrakcyjnych wzorów."
+      />
+      <meta
+        name="keywords"
+        content=""
+      />
 export const metadata: Metadata = {
-  title: "Blog Z Naklejkami | Spis Tresci | Zaklejki.pl",
-  description:
-    "Znajdź swoje ulubione naklejki od różnych tematów. Od sztuki po fantastykę, filmów, świata, smoków, bajek i baśni, a nawet abstrakcyjnych wzorów.",
-  keywords:
-    "naklejki, naklejki z motywami, naklejki z filmów, naklejki z bajek, naklejki z fantastyki, naklejki sztuki, naklejki abstrakcyjne, naklejki smoków, naklejki abstrakcyjne, naklejki świata, naklejki z natury, naklejki ze smiesznych",
+  title: "Spis Tresci - Zaklejki.pl",
+  description: "Znajdź tutaj spis treści ze wszystkich naszych wpisów na blogu, które nasza strona oferuje.",
+  keywords: "naklejki, naklejki z motywami, naklejki z filmów, naklejki z bajek, naklejki z fantastyki, naklejki sztuki, naklejki abstrakcyjne, naklejki smoków, naklejki abstrakcyjne, naklejki świata, naklejki z natury, naklejki ze smiesznych",
   openGraph: {
+    
     type: "website",
     url: "https://zaklejki.pl/blog/spis-tresci",
     title: "Spis Tresci - Zaklejki.pl",
-    description:
-      "Znajdź swoje ulubione naklejki od różnych tematów. Od sztuki po fantastykę, filmów, świata, smoków, bajek i baśni, a nawet abstrakcyjnych wzorów.",
+    description: "Znajdź tutaj spis treści ze wszystkich naszych wpisów na blogu, które nasza strona oferuje.",
     siteName: "zaklejki",
     images: [
       {

@@ -32,6 +32,8 @@ export default async function Page({ params }: { params: any }) {
       throw new Error(`No category ${params.category}`);
     }
 
+    console.log(products);
+
     return (
       <>
         <ShopProducts

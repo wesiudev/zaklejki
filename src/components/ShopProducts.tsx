@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import ImageThumbnail from "./ImageThumbnail";
 import debounce from "lodash/debounce";
 import Masonry from "react-masonry-css";
-import { polishToEnglish } from "@/lib/polishToEnglish";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import Link from "next/link";
 import shuffle from "lodash.shuffle";

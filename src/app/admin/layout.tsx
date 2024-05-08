@@ -15,7 +15,7 @@ export default function AdminLayout({
     return <Loading />;
   } else
     return (
-      <div className="w-full font-coco relative z-[9999] bg-white">
+      <div className="w-full font-coco fixed left-0 top-0 z-[9999] bg-white">
         {user ? (
           <>
             <Nav />

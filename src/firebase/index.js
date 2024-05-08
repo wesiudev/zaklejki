@@ -26,7 +26,7 @@ const firebaseConfig = {
 
 const websiteName = process.env.NEXT_PUBLIC_APP_NAME;
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
 const auth = getAuth(app);

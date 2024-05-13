@@ -66,33 +66,29 @@ export default function ImageThumbnail({
       >
         {!isLoading && product?.title && (
           <div className="z-20 opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 w-full flex flex-col items-center justify-center">
-            <div className="flex flex-row w-full">
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-green-400 text-white font-bold text-lg p-1.5 rounded-t-md">
+            <div className="flex flex-row">
+              <div className="text-center flex flex-col items-center">
+                <div className="bg-green-400 text-white font-bold text-lg p-1.5 rounded-md">
                   6cm
                 </div>
-                <div className="bg-green-400 text-white font-light p-2 text-lg w-full">
-                  7,90zł
-                </div>
+                <div className="bg-green-400 text-white font-light">7,90zł</div>
               </div>
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-blue-400 text-white font-bold text-lg p-1.5 rounded-t-md">
+              <div className="text-center flex flex-col items-center">
+                <div className="bg-blue-400 text-white font-bold text-lg p-1.5 rounded-md">
                   8cm
                 </div>
-                <div className="bg-blue-400 text-white font-light p-2 text-lg w-full">
-                  12,90zł
-                </div>
+                <div className="bg-blue-400 text-white font-light">12,90zł</div>
               </div>
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-yellow-400 text-white font-bold text-lg p-1.5 rounded-t-md">
+              <div className="text-center flex flex-col items-center">
+                <div className="bg-yellow-400 text-white font-bold text-lg p-1.5 rounded-md">
                   14cm
                 </div>
-                <div className="bg-yellow-400 text-white font-light p-2 text-lg w-full">
+                <div className="bg-yellow-400 text-white font-light">
                   17,90zł
                 </div>
               </div>
             </div>
-            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black  text-gray-300 font-bold">
+            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
               {product?.title ? product?.title : ""}
             </div>
           </div>

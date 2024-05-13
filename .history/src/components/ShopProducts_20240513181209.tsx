@@ -221,7 +221,7 @@ export default function ShopProducts({
                         key={i}
                         className={`${
                           i === 0 ? "lg:ml-3 lg:mt-3" : ""
-                        } bg-indigo-600 hover:bg-indigo-500 rounded-3xl text-sm font-bold text-white px-3 py-2`}
+                        } bg-indigo-600 hover:bg-[#f87ff0b6]  rounded-3xl text-sm font-bold text-white px-3 py-2`}
                       >
                         {cat.h1}
                       </Link>

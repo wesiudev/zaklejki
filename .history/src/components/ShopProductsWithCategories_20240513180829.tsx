@@ -17,15 +17,20 @@ export default function ShopProductsWithCategories({
       </h1>
       <p className="text-zinc-600 text-justify mt-6 mb-12">
         Zaklejki.pl to miejsce, gdzie znajdziesz ponad 2000 różnorodnych
-        naklejek.
+        naklejek, idealnych do ozdabiania każdej okazji. Nasza kolekcja zawiera
+        naklejki ręcznie wycinane, naklejki na ścianę, naklejki dla dzieci oraz
+        wiele innych. Oferujemy naklejki złote, srebrne, holograficzne i wiele
+        innych, które dodadzą blasku i charakteru Twoim projektom. Kup jedną z
+        naszych naklejek lub stwórz własną! Zaklejki.pl - sklep z największą
+        kolekcją naklejek ozdobnych
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3">
         {categories.map((item: any, i: any) => (
           <div
             key={i}
-            className="p-3 drop-shadow-xl shadow-black rounded-lg aspect-square w-full bg-indigo-200"
+            className="p-3 drop-shadow-xl shadow-black rounded-lg aspect-square h-full w-full bg-indigo-200"
           >
-            <h2 className="text-3xl font-bold text-zinc-800 drop-shadow-xl shadow-black">
+            <h2 className="text-3xl mt-4 font-bold text-zinc-800 drop-shadow-xl shadow-black">
               {item.h1}
             </h2>
 
@@ -59,7 +64,7 @@ export default function ShopProductsWithCategories({
             <div className="w-full flex items-end justify-center">
               <Link
                 href={`/sklep/${item.category}`}
-                className=" bg-indigo-600 hover:bg-indigo-500 duration-300 rounded-md text-white px-4 py-2 w-full h-full text-center"
+                className="mt-6 bg-indigo-600 hover:bg-indigo-500 duration-300 rounded-md text-white px-4 py-2 w-full h-full text-center"
               >
                 Zobacz więcej
               </Link>

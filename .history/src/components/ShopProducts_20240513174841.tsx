@@ -39,7 +39,7 @@ export default function ShopProducts({
   useEffect(() => {
     const nextStickers = products?.slice(
       selectedStickers?.length,
-      selectedStickers?.length + 36
+      selectedStickers?.length + 12
     );
     setSelectedStickers((prevStickers) => [...prevStickers, ...nextStickers]);
   }, [userTriggeredFetch]);
@@ -85,7 +85,7 @@ export default function ShopProducts({
       {isSlug && slug && (
         <>
           <div className="flex flex-col z-50 sticky top-[85px] lg:top-[105px]">
-            <div className="flex flex-row items-center bg-indigo-600 hover:bg-indigo-500 duration-300 rounded-3xl w-full pl-6 drop-shadow-xl shadow-black">
+            <div className="flex flex-row items-center bg-indigo-600 hover:bg-[#f87ff0b6] duration-300 rounded-3xl w-full pl-6 drop-shadow-xl shadow-black">
               <div
                 onClick={(e: any) => {
                   setCategoriesOpen(!categoriesOpen);
@@ -144,7 +144,7 @@ export default function ShopProducts({
                         key={i}
                         className={`${
                           i === 0 ? "lg:ml-3 lg:mt-3" : ""
-                        } bg-indigo-600 hover:bg-indigo-500  rounded-3xl text-sm font-bold text-white px-3 py-2`}
+                        } bg-indigo-600 hover:bg-[#f87ff0b6]  rounded-3xl text-sm font-bold text-white px-3 py-2`}
                       >
                         {cat.h1}
                       </Link>
@@ -162,7 +162,7 @@ export default function ShopProducts({
       {!isSlug && !slug && (
         <>
           <div className="flex flex-col z-50 sticky top-[85px] lg:top-[105px]">
-            <div className="flex flex-row items-center bg-indigo-600 hover:bg-indigo-500 duration-300 rounded-3xl w-full pl-6 drop-shadow-xl shadow-black">
+            <div className="flex flex-row items-center bg-indigo-600 hover:bg-[#f87ff0b6] duration-300 rounded-3xl w-full pl-6 drop-shadow-xl shadow-black">
               <div
                 onClick={(e: any) => {
                   setCategoriesOpen(!categoriesOpen);
@@ -221,7 +221,7 @@ export default function ShopProducts({
                         key={i}
                         className={`${
                           i === 0 ? "lg:ml-3 lg:mt-3" : ""
-                        } bg-indigo-600 hover:bg-indigo-500 rounded-3xl text-sm font-bold text-white px-3 py-2`}
+                        } bg-indigo-600 hover:bg-[#f87ff0b6]  rounded-3xl text-sm font-bold text-white px-3 py-2`}
                       >
                         {cat.h1}
                       </Link>
@@ -257,21 +257,12 @@ export default function ShopProducts({
           </div>
         ))}
       </Masonry>
-      <div className="w-full flex justify-center">
-        {selectedStickers.length < products.length && (
-          <button
-            onClick={() => setUserTriggeredFetch(!userTriggeredFetch)}
-            className="py-3 px-12 mx-auto rounded-xl text-white font-bold bg-indigo-600 hover:bg-indigo-500 duration-300 my-12 drop-shadow-xl shadow-black"
-          >
-            Wczytaj więcej
-          </button>
-        )}
-        {selectedStickers.length >= products.length && (
-          <div className="text-center italic my-12">
-            Wyświetlono już wszystkie naklejki ({products.length})
-          </div>
-        )}
-      </div>
+      <button
+        onClick={() => setUserTriggeredFetch(!userTriggeredFetch)}
+        className="py-3 px-12 mx-auto rounded-xl text-white font-bold bg-indigo-600 hover:bg-indigo-500 duration-300 my-12"
+      >
+        Wczytaj więcej
+      </button>
     </div>
   );
 }

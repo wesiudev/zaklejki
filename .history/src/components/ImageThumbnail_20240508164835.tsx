@@ -65,36 +65,8 @@ export default function ImageThumbnail({
         className="relative group duration-500 overflow-hidden"
       >
         {!isLoading && product?.title && (
-          <div className="z-20 opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 w-full flex flex-col items-center justify-center">
-            <div className="flex flex-row w-full">
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-green-400 text-white font-bold text-lg p-1.5 rounded-t-md">
-                  6cm
-                </div>
-                <div className="bg-green-400 text-white font-light p-2 text-lg w-full">
-                  7,90zł
-                </div>
-              </div>
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-blue-400 text-white font-bold text-lg p-1.5 rounded-t-md">
-                  8cm
-                </div>
-                <div className="bg-blue-400 text-white font-light p-2 text-lg w-full">
-                  12,90zł
-                </div>
-              </div>
-              <div className="text-center flex flex-col items-center w-full">
-                <div className="bg-yellow-400 text-white font-bold text-lg p-1.5 rounded-t-md">
-                  14cm
-                </div>
-                <div className="bg-yellow-400 text-white font-light p-2 text-lg w-full">
-                  17,90zł
-                </div>
-              </div>
-            </div>
-            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black  text-gray-300 font-bold">
-              {product?.title ? product?.title : ""}
-            </div>
+          <div className="z-20 opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
+            {product?.title ? product?.title : ""}
           </div>
         )}
         {/* {user?.email === "wesiu@wesiu.pl" && (
@@ -113,7 +85,27 @@ export default function ImageThumbnail({
             </button>
           </div>
         )} */}
-
+        <div className="z-[25] group-hover:opacity-100 opacity-0 duration-500 absolute left-0 top-0 w-full h-auto overflow-hidden rounded-lg">
+          <div className="relative w-full h-full group-hover:scale-[2] duration-500">
+            <Image
+              src="/slugImages/macbookmockup1.webp"
+              width={1024}
+              height={1024}
+              title={`naklejka ${product.title}`}
+              alt={`naklejka ${product.title}`}
+              className="rounded-3xl"
+            />
+            <Image
+              priority
+              src={product.image_thumbnail}
+              width={150}
+              height={150}
+              title="Naklejka na laptopa, iphone lub tablet"
+              alt={`${product.title} na laptopa, iphone lub tablet`}
+              className="h-auto w-[15%] absolute right-[33.5%] top-[55%] -translate-y-1/2 z-[50] shadow-sm shadow-black"
+            />
+          </div>
+        </div>
         <Image
           className={`group-hover:opacity-50 duration-500 overflow-hidden rounded-xl ${
             isLoading ? "bg-zinc-500 bg-opacity-50 animate-pulse" : ""
@@ -122,8 +114,8 @@ export default function ImageThumbnail({
           width={400}
           height={400}
           src={product?.image_thumbnail}
-          title={`${product?.title}`}
-          alt={`${product?.title}`}
+          title={`${product?.title} odzobna na ścianę`}
+          alt={`${product?.title} odzobna na ścianę`}
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAA"
           placeholder="blur"
           onLoad={() => setIsLoading(false)}

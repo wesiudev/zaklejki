@@ -37,7 +37,7 @@ export default function ImageFullSize({ product }: { product: any }) {
           }`}
         >
           <Image
-            src="/zaklejkilogo.png"
+            src="/zaklejkilogo2.png"
             width={200}
             height={200}
             title="Zaklejki Logo"

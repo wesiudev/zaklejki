@@ -92,7 +92,7 @@ export default function ImageThumbnail({
                 </div>
               </div>
             </div>
-            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black  text-gray-300 font-bold">
+            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
               {product?.title ? product?.title : ""}
             </div>
           </div>

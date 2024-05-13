@@ -65,7 +65,7 @@ export default function ImageThumbnail({
         className="relative group duration-500 overflow-hidden"
       >
         {!isLoading && product?.title && (
-          <div className="z-20 opacity-0 group-hover:opacity-100 duration-300 absolute text-sm bottom-0 left-0 w-full flex flex-col items-center justify-center">
+          <div className="z-20 opacity-0  duration-300 absolute text-sm bottom-0 left-0 w-full flex flex-col items-center justify-center">
             <div className="flex flex-row w-full">
               <div className="text-center flex flex-col items-center w-full">
                 <div className="bg-green-400 text-white font-bold text-lg p-1.5 rounded-t-md">
@@ -92,7 +92,7 @@ export default function ImageThumbnail({
                 </div>
               </div>
             </div>
-            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black  text-gray-300 font-bold">
+            <div className="py-0.5 px-2 rounded-b-xl w-full text-center bg-black bg-opacity-50 text-gray-300 font-bold">
               {product?.title ? product?.title : ""}
             </div>
           </div>

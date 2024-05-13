@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "zaklejki",
     images: [
       {
-        url: "/zaklejkilogo.png",
+        url: "/zaklejkilogo2.png",
       },
     ],
   },

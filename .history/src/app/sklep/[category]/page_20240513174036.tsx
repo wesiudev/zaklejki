@@ -78,7 +78,7 @@ export async function generateMetadata({ params }: { params: any }) {
         siteName: "zaklejki",
         images: [
           {
-            url: "/zaklejkilogo.png",
+            url: "/zaklejkilogo2.png",
           },
         ],
       },

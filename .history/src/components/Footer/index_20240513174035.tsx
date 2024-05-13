@@ -95,7 +95,7 @@ export default function Footer() {
           </p>
           <Link href="/" title="Strona główna">
             <Image
-              src="/zaklejkilogo.png"
+              src="/zaklejkilogo2.png"
               width={150}
               height={150}
               alt=""

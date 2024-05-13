@@ -49,22 +49,6 @@ export default function ImageFullSize({ product }: { product: any }) {
             </div>
           </>
         )}
-        {product.title.includes("putin") && (
-          <Image
-            className={`rounded-3xl ${
-              isLoading ? "bg-[#f87ff080] animate-pulse blur-sm" : ""
-            }`}
-            priority
-            width={1920}
-            height={1080}
-            src="/putin-water-proof.png"
-            title={`Naklejka na pisuar ${polishToEnglish(product.title)}`}
-            alt={`Naklejka na pisuar ${polishToEnglish(product.title)}`}
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAA"
-            placeholder="blur"
-            onLoad={() => setIsLoading(false)}
-          />
-        )}
       </div>
     </>
   );

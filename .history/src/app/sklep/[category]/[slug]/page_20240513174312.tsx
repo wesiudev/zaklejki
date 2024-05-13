@@ -71,39 +71,27 @@ export default async function Page({ params }: { params: any }) {
       <main className="flex flex-col-reverse lg:grid lg:grid-cols-2">
         <div className="flex flex-col lg:pb-12">
           <div className="flex-col gap-3 h-max relative xl:top-0 hidden lg:flex">
-            {product.title.includes("putin") && (
-              <Image
-                src="/putin-like.png"
-                width={1024}
-                height={1024}
-                alt={`Mockup ${product.title}`}
-                title={`Mockup ${product.title}`}
-                className="mb-12 w-full rounded-3xl"
-              />
-            )}
             <ImageFullSize product={product} />
             <div className="group overflow-hidden rounded-3xl">
-              {!product.title.includes("putin") && (
-                <div className="relative w-full h-full group-hover:scale-150 duration-700 ease-in-out">
-                  <Image
-                    src="/slugImages/macbookmockup1.webp"
-                    width={1024}
-                    height={1024}
-                    alt={`Mockup Naklejki ${product.title}`}
-                    title={`Mockup Naklejki ${product.title}`}
-                    className=""
-                  />
-                  <Image
-                    priority
-                    src={product.image_source}
-                    width={150}
-                    height={150}
-                    title="Mała skala obrazek na mockup'ie"
-                    alt="Mała skala obrazek na mockup'ie"
-                    className="h-auto w-[13%] absolute right-[34%] top-[54.5%] -translate-y-1/2 z-[50] shadow-sm shadow-black"
-                  />
-                </div>
-              )}
+              <div className="relative w-full h-full group-hover:scale-150 duration-700 ease-in-out">
+                <Image
+                  src="/slugImages/macbookmockup1.webp"
+                  width={1024}
+                  height={1024}
+                  alt={`Mockup Naklejki ${product.title}`}
+                  title={`Mockup Naklejki ${product.title}`}
+                  className=""
+                />
+                <Image
+                  priority
+                  src={product.image_source}
+                  width={150}
+                  height={150}
+                  title="Mała skala obrazek na mockup'ie"
+                  alt="Mała skala obrazek na mockup'ie"
+                  className="h-auto w-[13%] absolute right-[34%] top-[54.5%] -translate-y-1/2 z-[50] shadow-sm shadow-black"
+                />
+              </div>
             </div>
           </div>
           <div className="flex mt-12 flex-col text-zinc-800 drop-shadow-xl shadow-black space-y-4">

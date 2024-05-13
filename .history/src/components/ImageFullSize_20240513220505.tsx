@@ -57,7 +57,7 @@ export default function ImageFullSize({ product }: { product: any }) {
             priority
             width={1920}
             height={1080}
-            src="/putin-water-proof.png"
+            src={product.image_source}
             title={`Naklejka na pisuar ${polishToEnglish(product.title)}`}
             alt={`Naklejka na pisuar ${polishToEnglish(product.title)}`}
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAA"

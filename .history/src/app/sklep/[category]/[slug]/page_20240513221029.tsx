@@ -71,16 +71,6 @@ export default async function Page({ params }: { params: any }) {
       <main className="flex flex-col-reverse lg:grid lg:grid-cols-2">
         <div className="flex flex-col lg:pb-12">
           <div className="flex-col gap-3 h-max relative xl:top-0 hidden lg:flex">
-            {product.title.includes("putin") && (
-              <Image
-                src="/putin-like.png"
-                width={1024}
-                height={1024}
-                alt={`Mockup ${product.title}`}
-                title={`Mockup ${product.title}`}
-                className="mb-12 w-full rounded-3xl"
-              />
-            )}
             <ImageFullSize product={product} />
             <div className="group overflow-hidden rounded-3xl">
               {!product.title.includes("putin") && (
@@ -103,6 +93,16 @@ export default async function Page({ params }: { params: any }) {
                     className="h-auto w-[13%] absolute right-[34%] top-[54.5%] -translate-y-1/2 z-[50] shadow-sm shadow-black"
                   />
                 </div>
+              )}
+              {product.title.includes("putin") && (
+                <Image
+                  src="/putin-like.png"
+                  width={1024}
+                  height={1024}
+                  alt={`Mockup ${product.title}`}
+                  title={`Mockup ${product.title}`}
+                  className=""
+                />
               )}
             </div>
           </div>

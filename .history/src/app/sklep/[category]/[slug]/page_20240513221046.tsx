@@ -78,7 +78,7 @@ export default async function Page({ params }: { params: any }) {
                 height={1024}
                 alt={`Mockup ${product.title}`}
                 title={`Mockup ${product.title}`}
-                className="mb-12 w-full rounded-3xl"
+                className="mb-12"
               />
             )}
             <ImageFullSize product={product} />

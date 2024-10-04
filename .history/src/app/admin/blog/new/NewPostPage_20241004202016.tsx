@@ -65,6 +65,7 @@ export default function NewPostPage() {
     newTags.splice(idx, 1);
     setInput({ ...input, tags: newTags });
   };
+
   return (
     <>
       <EditSection

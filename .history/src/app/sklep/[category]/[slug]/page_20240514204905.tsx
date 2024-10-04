@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 import { getShopProduct } from "@/lib/getShopProduct";
 import Link from "next/link";
 import { FaArrowRight, FaShippingFast } from "react-icons/fa";
@@ -8,6 +9,7 @@ import ProductInteractions from "./ProductInteractions";
 import ImageFullSize from "@/components/ImageFullSize";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiEmojiStickerLine } from "react-icons/ri";
+import { removeNumbersFromString } from "@/lib/removeNumbersFromString";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";
 import { capitalizeFirstLetter } from "@/lib/capitalizeFirstLetter";
 import Image from "next/image";

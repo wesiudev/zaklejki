@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import { getShopProduct } from "@/lib/getShopProduct";
 import Link from "next/link";
 import { FaArrowRight, FaShippingFast } from "react-icons/fa";
 import { polishToEnglish } from "@/lib/polishToEnglish";
@@ -12,8 +10,13 @@ import { getProductsByCategory } from "@/lib/getProductsByCategory";
 import { capitalizeFirstLetter } from "@/lib/capitalizeFirstLetter";
 import Image from "next/image";
 export async function generateStaticParams() {
-  const products = await getShopProduct();
-  return products?.products?.map((product: any) => ({
+  const products = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/shop?secret=${process.env.API_SECRET_KEY}`,
+    { next: { revalidate: 360 } }
+  ).then((res: any) => {
+    return res.json();
+  });
+  return products?.map((product: any) => ({
     slug: polishToEnglish(product.title),
   }));
 }

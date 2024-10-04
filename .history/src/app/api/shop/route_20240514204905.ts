@@ -4,7 +4,13 @@ import { NextResponse, NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
   const products = await getProducts();
+  const secret = req.nextUrl.searchParams.get("secret");
   const slug = req.nextUrl.searchParams.get("slug");
+
+  if (secret !== process.env.API_SECRET_KEY) {
+    return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
+  }
+
   if (!slug) {
     return NextResponse.json({
       products: products?.products?.sort(() => Math.random() - 0.5),

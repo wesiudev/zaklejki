@@ -14,7 +14,10 @@ export const metadata: Metadata = {
   title: "Sklep z naklejkami | Stwórz swoją naklejkę | Naklejki na ścianę",
   description:
     "Ręcznie wycinane naklejki. Kup jedną z naszych naklejek i twórz własne. Naklejki złote, srebrne, holo. Naklejki na każdą okazję. Sklep z największą kolekcja naklejek ozdobnych.",
-  authors: [{ name: "wesiudev.com", url: "https://wesiudev.com" }],
+  authors: [
+    { name: "wesiudev.com", url: "https://wesiudev.com" },
+    { name: "blackbell", url: "https://blackbellart.com/" },
+  ],
   publisher: "wesiudev.com",
   keywords: [
     "naklejki ręcznie wycinane, naklejki na każdą okazję, naklejki na ścianę, naklejki dla dzieci, naklejki, naklejki bajkowe, naklejki złote, naklejki holograficzne, naklejki srebrne, drukowanie naklejek, naklejki z anime, naklejki na ścianę do kuchni, naklejki na ścianę nowoczesne, naklejki na ścianę dinozaury, naklejki na ścianę kwiaty, nalepki na ścianę",

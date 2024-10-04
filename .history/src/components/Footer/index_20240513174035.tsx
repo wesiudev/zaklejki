@@ -149,10 +149,10 @@ export default function Footer() {
             Linki
           </h2>
           <Link
-            href="https://wesiu.dev"
+            href="https://wesiudev.com"
             className="flex items-center hover:underline mt-6"
           >
-            wesiu.dev
+            wesiudev.com
           </Link>
           <Link
             href="https://quixy.pl"

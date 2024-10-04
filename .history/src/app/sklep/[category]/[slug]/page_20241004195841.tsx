@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import { getShopProduct } from "@/lib/getShopProduct";
 import Link from "next/link";
 import { FaArrowRight, FaShippingFast } from "react-icons/fa";
 import { polishToEnglish } from "@/lib/polishToEnglish";
@@ -11,6 +9,15 @@ import { RiEmojiStickerLine } from "react-icons/ri";
 import { getProductsByCategory } from "@/lib/getProductsByCategory";
 import { capitalizeFirstLetter } from "@/lib/capitalizeFirstLetter";
 import Image from "next/image";
+
+async function getShopProduct() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/shop?secret=${process.env.API_SECRET_KEY}`
+  );
+  const data = await res.json();
+  return data;
+}
+
 export async function generateStaticParams() {
   const products = await getShopProduct();
   return products?.products?.map((product: any) => ({
